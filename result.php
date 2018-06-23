@@ -71,6 +71,7 @@
                         echo "<dt>Salud Ambiental : </dt><dd>".$resultados['Enviro. Health']["$i"].'</dd>';
                         echo "<dt>Vitalidad del Ecosistema : </dt><dd>".$resultados['Ecosyst Vitality']["$i"].'</dd>';
                         echo "<dt>Sostenibilidad : </dt><dd>".$resultados['Score']["$i"].'</dd>';
+                        echo "<button type='button' class='btn btn-lg btn-block btn-success'>Mas información</button>";
                     }
                 ?>
                 , Rain Probability, Max Temp, Enviro. Health, Ecosyst Vitality, Score
