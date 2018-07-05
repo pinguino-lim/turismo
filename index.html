@@ -28,51 +28,69 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- <style>
+        .allbody {
+            background-image: url("img/turismo.jpg");
+            height: 100%;
+            position: relative;
+            opacity: 0.80;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style> -->
   </head>
 
   <body>
-
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">                      
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                </div><!--/.nav-collapse -->
+            </div>
         </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>      
-      <div>
-        <h2>Descubre tu Destino Sostenible</h2>
-        <!-- <p>Quieres descubrir una nueva experiencia, vivir la verdadera tradición, conocer lugares que nadie m'as ha visitado y cuidar el medio ambiente.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->                  
-      </div>
+    <div class="container">      
       <div class="row marketing">            
         <div class="col-lg-6">
-            <form class="form-horizontal" action="php/descubrir.php" method="POST">
+            <img src="img/how.png" style=" width: 90%;">
+        </div>
+        <div class="col-lg-6">
+            <form class="form-horizontal" action="resultados.php" method="POST">
                 <div class="form-group">
                     <label for="" class="col-sm-6 control-label">Ciudad de Partida</label>
                     <div class="col-sm-6">
-                    <input type="text" class="form-control" name="ciudadSalida" id="ciudadSalida" placeholder="Ciudad de Partida">
+                    <input type="text" class="form-control" name="ciudadSalida" id="ciudadSalida" placeholder="E.g.: Madrid">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-6 control-label">Desde la fecha</label>
                     <div class="col-sm-6">
-                    <input type="text" class="form-control" name="firstPossibleDepartureDate" id="firstPossibleDepartureDate" placeholder="Fecha desde">
+                    <input type="date" class="form-control" name="firstPossibleDepartureDate" id="firstPossibleDepartureDate" placeholder="Fecha desde">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-6 control-label">Hasta esta fecha</label>
                     <div class="col-sm-6">
-                    <input type="text" class="form-control" name="lasttPossibleDepartureDate" id="lasttPossibleDepartureDate" placeholder="Hasta...">
+                    <input type="date" class="form-control" name="lasttPossibleDepartureDate" id="lasttPossibleDepartureDate" placeholder="Hasta...">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-sm-6 control-label">Duración</label>
                     <div class="col-sm-6">
-                    <input type="text" class="form-control" name="duration" id="duration" placeholder="Duración del viaje">
+                    <input type="number" class="form-control" name="duration" id="duration" placeholder="7 dias">
                     </div>
                 </div>
                 <div class="form-group">
@@ -88,27 +106,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-6 control-label" for="">Dinero (in $, €)</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">€</div>
-                        <input type="text" class="form-control" name="budget" id="budget" placeholder="Cantidad">
-                        <div class="input-group-addon">.00</div>
+                    <label for="" class="col-sm-6 control-label">Dinero</label>
+                    <div class="col-sm-6">
+                    <input type="number" class="form-control" name="budget" id="budget" placeholder="1000">
                     </div>
-                </div>
+                </div>                
                 <br>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Descubrir</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block">Descubrir</button>
             </form>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
 
